@@ -75,14 +75,14 @@ div .center {
   margin: 0 auto;
 }
 
-.btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary {
+.btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary, .btn {
   padding: 1.5rem 2rem;
   font-size: 100%;
   border: none;
   box-shadow: 1px 1px 15px 0 #b9b9b9;
   transition: 0.3s all ease-out;
 }
-.btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover {
+.btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover, .btn:hover {
   box-shadow: 2px 2px 15px 0 #999;
   cursor: pointer;
 }
@@ -116,5 +116,45 @@ div .center {
   background-color: #FCF7FF;
   color: #010108;
 }
+
+/* =======================================
+			Home Page Styles
+======================================= */
+.site-header .main-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.site-header .main-nav ul {
+  list-style-type: none;
+  margin: 0 2rem 0 0;
+  padding: 0;
+}
+.site-header .main-nav li {
+  display: inline-block;
+}
+.site-header .main-nav a {
+  display: inline-block;
+  color: #FCF7FF;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s all ease-out;
+}
+.site-header .main-nav a:hover {
+  border-bottom: 2px solid #FCF7FF;
+}
+
+/* =======================================
+			About Page Styles
+======================================= */
+/* =======================================
+			Services Page Styles
+======================================= */
+/* =======================================
+			Gallery Page Styles
+======================================= */
+/* =======================================
+			Contact Page Styles
+======================================= */
 
 /*# sourceMappingURL=base.css.map */
