@@ -1,0 +1,48 @@
+@use 'base';
+
+/* -------- footer widgets -------- */
+
+.footer-widgets	{
+	//border: 1px dotted red;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+	place-items: center;
+	grid-gap: 1rem;
+
+	.widget 	{
+		//box-shadow: 1px 1px 15px 0 #888;
+		padding: 1rem;
+	}
+}
+
+// footer socials
+.footer-socials	{
+	//border: 1px solid blue;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+
+	div 	{
+		width: 5rem;
+		height: 5rem;
+		display: grid;
+		place-items: center;
+		margin: 1rem;
+		background: base.$dark_purple;
+		color: base.$white;
+		transition: .5s all ease-out;
+
+		&:hover 	{
+			border: 2px solid base.$dark_purple;
+			background: base.$white;
+			color: base.$dark_purple;
+			box-shadow: 1px 1px 15px 0 #d7d7d7;
+			cursor: pointer;
+		}
+
+		i 	{
+			font-size: 150%;
+			
+		}
+	}
+}
