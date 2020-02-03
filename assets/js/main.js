@@ -31,6 +31,15 @@ $(document).ready(function()	{
 		$('html, body').animate({scrollTop: 0}, 800);
 		return false;
 	});
+
+	// initialize slick js carousel
+	$('.testimonials').slick({
+		dots: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'ease-out',
+		arrows: false
+	});
 });
 
 // testing-purposed object

@@ -183,6 +183,68 @@
 	}
 }
 
+/* -------- fp testimonials -------- */
+
+.testimonials-section 	{
+	//border: 2px solid red;
+	margin: 10rem auto;
+
+	h2	{
+		text-transform: capitalize;
+		margin: 2rem;
+	}
+}
+
+.testimonials 	{
+	//border: 2px solid red;
+	width: 100%;
+	margin: 5rem auto;
+	padding: 5rem 0;
+	background-color: base.$dark_blue;
+	color: base.$white;
+
+	.testimonial 	{
+		text-align: center;
+
+		p 	{
+			font-style: oblique;
+
+			&:before,
+			&:after	{
+				content: "''";
+			font-size: 3rem;
+			}
+		}
+	}
+
+	.slick-dots 	{
+		list-style-type: none;
+
+		li 	{
+			display: inline-block;
+		}
+		button 	{
+			border: none;
+			border-radius: 5px;
+			background-color: base.$white;
+			color: base.$black;
+			font-size: 100%;
+			display: grid;
+			place-items: center;
+			width: 5rem;
+			height: 5rem;
+			margin: 2rem;
+			//padding: 2rem;
+			cursor: pointer;
+			transition: .3s all ease-out;
+
+			&:hover	{
+				box-shadow: 2px 2px 15px 0 #d7d7d7;
+			}
+		}
+	}
+}
+
 /* -------- site footer -------- */
 
 .site-footer 	{
@@ -196,6 +258,11 @@
 		margin-top: 2rem;
 	}
 }
+
+			@keyframes shake	{
+				from { padding-left: 0; }
+				to { padding-left: 1rem; }
+			}
 
 .footer-widgets	{
 	//border: 1px dotted red;
@@ -217,8 +284,33 @@
 		h2	{
 			text-align: center;
 		}
+
+		&:nth-child(2)	{
+			border: 1px dotted #999;
+
+			ul 	{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+
+
+
+			a 	{
+				text-decoration: none;
+				transition: .3s all ease-out;
+				animation: shake .5s 1;
+				animation-play-state: paused;
+
+				&:hover	{
+					animation-play-state: running;
+				}
+			}
+		}
 	}
 }
+
+
 
 // footer socials
 .footer-socials	{
