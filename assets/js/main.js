@@ -42,78 +42,44 @@ $(document).ready(function()	{
 	});
 });
 
-// testing-purposed object
 
-// object literals
+window.onload = function()	{
+	var demoNode = document.createElement("button");
+	var demoText = document.createTextNode("CTA");
+	demoNode.appendChild(demoText);
+	var location = document.getElementById("demo2");
+	location.appendChild(demoNode);
+	demoNode.setAttribute('class', 'btn-info');
+	demoNode.setAttribute('id', 'remover');
 
-// const blogs = [
-// 	{
-// 		title: 'first title',
-// 		likes: 30
-// 	},
-// 	{
-// 		title: 'writing',
-// 		likes: 50
-// 	},
-// 	{
-// 		title: 'painting',
-// 		likes: 25
+	demoNode.onclick = function()	{
+		alert('argaergaerg');
+	}
+}
+
+// unija na dve polinja
+
+// function union(arr1, arr2)	{
+// 	if((arr1 == null) || (arr2 == null))
+// 		return void 0;
+
+// 	var obj = {};
+
+// 	for(var i = arr1.length - 1; i >= 0; --i)
+// 		obj[arr1[i]] = arr1[i];
+
+// 	for(var i = arr2.length - 1; i >= 0; --i)
+// 		obj[arr2[i]] = arr2[i];
+
+// 	var res = [];
+
+// 	for(var n in obj)	{
+// 		if(obj.hasOwnProperty(n))
+// 			res.push(obj[n]);
 // 	}
-// ];
 
-// console.log(blogs);
-
-// var warrior = {
-// 	firstName: 'stefan',
-// 	lastName: 'lazarevski',
-// 	age: 25,
-// 	blogs: [
-// 		{
-// 			title: 'first title',
-// 			likes: 30
-// 		},
-// 		{
-// 			title: 'writing',
-// 			likes: 50
-// 		},
-// 		{
-// 			title: 'painting',
-// 			likes: 25
-// 		}
-// 	],
-// 	location: 'skopje',
-// 	login()	{
-// 		console.log('the user logged in');
-// 	},
-// 	logout()	{
-// 		console.log('the user logged out');
-// 	},
-// 	logBlogs()	{
-// 		//console.log(this);
-// 		console.log('this user has done some shit');
-// 		this.blogs.forEach(blog =>{
-// 			console.log(blog.title, blog.likes);
-// 		});
-// 	}
+// 	return res;
 // }
 
-// warrior.logBlogs();
+// console.log(union([1, 2, 3], [100, 15, 2331, 2, 2, 1, 10]));
 
-
-// ============== Math Object ============== //
-
-console.log(Math);
-console.log(Math.PI);
-
-const area = 7.7;
-
-console.log(Math.round(area));
-console.log(Math.floor(area));
-console.log(Math.ceil(area));
-console.log(Math.trunc(area)); // takes away the decimal and leaves the integer
-
-// random numbers
-
-const random = Math.random();
-console.log(random);
-console.log(Math.round(random * 100));

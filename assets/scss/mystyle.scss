@@ -163,7 +163,7 @@
 .portfolio-section	{
 	width: 90%;
 	margin: 10rem auto;
-	height: 100vh;
+	//height: 100vh;
 
 	.gallery	{
 		margin: 10rem auto;
@@ -204,7 +204,10 @@
 	color: base.$white;
 
 	.testimonial 	{
+		//border: 1px solid red;
 		text-align: center;
+		width: 60%;
+		margin: 0 auto;
 
 		p 	{
 			font-style: oblique;
@@ -245,6 +248,12 @@
 	}
 }
 
+#demo2	{
+	width: 100%;
+	border: 2px solid red;
+	
+}
+
 /* -------- site footer -------- */
 
 .site-footer 	{
@@ -258,11 +267,6 @@
 		margin-top: 2rem;
 	}
 }
-
-			@keyframes shake	{
-				from { padding-left: 0; }
-				to { padding-left: 1rem; }
-			}
 
 .footer-widgets	{
 	//border: 1px dotted red;
@@ -293,8 +297,6 @@
 				margin: 0;
 				padding: 0;
 			}
-
-
 
 			a 	{
 				text-decoration: none;

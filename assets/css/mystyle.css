@@ -300,7 +300,6 @@ div .center {
 .portfolio-section {
   width: 90%;
   margin: 10rem auto;
-  height: 100vh;
 }
 .portfolio-section .gallery {
   margin: 10rem auto;
@@ -335,6 +334,8 @@ div .center {
 }
 .testimonials .testimonial {
   text-align: center;
+  width: 60%;
+  margin: 0 auto;
 }
 .testimonials .testimonial p {
   font-style: oblique;
@@ -367,6 +368,11 @@ div .center {
   box-shadow: 2px 2px 15px 0 #d7d7d7;
 }
 
+#demo2 {
+  width: 100%;
+  border: 2px solid red;
+}
+
 /* -------- site footer -------- */
 .site-footer {
   margin: 10rem 0 0 0;
@@ -378,14 +384,6 @@ div .center {
   margin-top: 2rem;
 }
 
-@keyframes shake {
-  from {
-    padding-left: 0;
-  }
-  to {
-    padding-left: 1rem;
-  }
-}
 .footer-widgets {
   display: flex;
   flex-wrap: wrap;
