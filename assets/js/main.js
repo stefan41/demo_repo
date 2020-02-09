@@ -32,54 +32,94 @@ $(document).ready(function()	{
 		return false;
 	});
 
-	// initialize slick js carousel
-	$('.testimonials').slick({
-		dots: true,
-		speed: 500,
-		fade: true,
-		cssEase: 'ease-out',
-		arrows: false
-	});
 });
 
+/* ===========================================
+	create button that changes paragraph color
+=========================================== */
 
-window.onload = function()	{
-	var demoNode = document.createElement("button");
-	var demoText = document.createTextNode("CTA");
-	demoNode.appendChild(demoText);
-	var location = document.getElementById("demo2");
-	location.appendChild(demoNode);
-	demoNode.setAttribute('class', 'btn-info');
-	demoNode.setAttribute('id', 'remover');
+// var btn = document.createElement("button");
+// var btnText = document.createTextNode("change color");
+// btn.append(btnText);
+// btn.setAttribute('class', 'btn-primary mar1');
 
-	demoNode.onclick = function()	{
-		alert('argaergaerg');
-	}
-}
-
-// unija na dve polinja
-
-// function union(arr1, arr2)	{
-// 	if((arr1 == null) || (arr2 == null))
-// 		return void 0;
-
-// 	var obj = {};
-
-// 	for(var i = arr1.length - 1; i >= 0; --i)
-// 		obj[arr1[i]] = arr1[i];
-
-// 	for(var i = arr2.length - 1; i >= 0; --i)
-// 		obj[arr2[i]] = arr2[i];
-
-// 	var res = [];
-
-// 	for(var n in obj)	{
-// 		if(obj.hasOwnProperty(n))
-// 			res.push(obj[n]);
-// 	}
-
-// 	return res;
+// btn.onclick = function()	{
+// 	var para = document.getElementById('para1');
+// 	para.style.color = "blue";
 // }
 
-// console.log(union([1, 2, 3], [100, 15, 2331, 2, 2, 1, 10]));
+// document.getElementsByClassName('demo3')[0].appendChild(btn);
 
+
+/* ===========================================
+	XMLHttpRequest
+=========================================== */
+
+
+// const getBtn = document.getElementById('get-btn');
+// const postBtn = document.getElementById('post-btn');
+
+// const sendHttpRequest = (method, url, data) => {
+
+// 	const promise = new Promise((resolve, reject) => {
+// 		const xhr = new XMLHttpRequest();
+
+// 		xhr.open(method, url);
+
+// 		xhr.responseType = 'json';
+
+// 		if(data)	{
+// 			xhr.setRequestHeader('Content-Type','application/json');
+// 		}
+
+// 		xhr.onload = () => {
+// 			if(xhr.status >= 400)	{
+// 				reject(xhr.response);
+// 			} else {
+// 				resolve(xhr.response);
+// 			}	
+// 		}
+
+// 		xhr.onerror = () => {
+// 			reject('Something went wrong!');
+// 		};
+
+// 		xhr.send(JSON.stringify(data));
+// 	});	
+
+// 	return promise;
+// }
+
+// const getData = () => {
+// 	sendHttpRequest('GET', 'https://reqres.in/api/users').then(responseData => {
+// 		console.log(responseData);
+// 	});
+// };
+
+// const sendData = () => {
+// 	sendHttpRequest('POST', 'https://reqres.in/api/register', {
+// 		"email": "eve.holt@reqres.in",
+//     	//"password": "pistol"
+// 	}).then(responseData => {
+// 		console.log(responseData);
+// 	}).catch(err => {
+// 		console.log(err);
+// 	});
+// };
+
+// getBtn.addEventListener('click', getData);
+// postBtn.addEventListener('click', sendData);
+
+const xhr = new XMLHttpRequest();
+
+xhr.onload = function()	{
+	const serverResponse = document.getElementById('srvRes');
+
+	serverResponse.innerHTML = this.responseText;
+};
+
+xhr.open('POST', 'dom.php');
+
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+xhr.send('name=stefan&message=how is it going');

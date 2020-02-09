@@ -54,6 +54,18 @@ img 	{
 	max-width: 100%;
 }
 
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password']	{
+	height: 5rem;
+	border: 1px solid #e8e8e8;
+	width: 100%;
+	margin: 1rem auto;
+	font-family: $sans4;
+	font-size: 100%;
+	padding-left: 1rem;
+}
 /* ========== Custom Classes ========== */
 
 .center	{
@@ -136,6 +148,10 @@ img 	{
 	color: $black;
 }
 
+.section	{
+	margin: 10rem auto;
+}
+
 /* ----------- scroll to top button ----------- */
 
 .scrl2top	{
@@ -160,12 +176,13 @@ img 	{
 	}
 }
 
-/* =======================================
-			Home Page Styles
-======================================= */
+/* ------- site header ------- */
 
 .site-header	{
-
+	background-color: $dark_blue;
+	color: $white;
+	padding: 1rem;
+	text-align: center;
 
 	.main-nav	{
 		display: flex;
@@ -196,18 +213,18 @@ img 	{
 	}
 }
 
-/* =======================================
-			About Page Styles
-======================================= */
+/* ------- main content ------- */
 
-/* =======================================
-			Services Page Styles
-======================================= */
+.main-content	{
+	width: 90%;
+	margin: 0 auto;
+}
 
-/* =======================================
-			Gallery Page Styles
-======================================= */
+/* ------- site footer ------- */
 
-/* =======================================
-			Contact Page Styles
-======================================= */
+.site-footer	{
+	background-color: $dark_blue;
+	color: $white;
+	padding: 1rem;
+	text-align: center;
+}
